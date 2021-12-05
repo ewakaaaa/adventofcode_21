@@ -1,9 +1,5 @@
 import statistics
 
-oxygen_generator_rating = 0  
-CO2_scrubber_rating = 0 
-
-
 for i in range(0,13):
     bit = [] 
     file_name = '/Users/ewasu/adventofcode_21/day3/puzzle.txt'
@@ -11,7 +7,7 @@ for i in range(0,13):
     lines = puzzle.readlines() 
 
     if len(lines) == 1: 
-        oxygen_generator_rating = int(''.join([str(i) for i in lines]), 2)
+        oxygen_generator_rating = int(lines[0], 2)
         print(oxygen_generator_rating)
         break
 
