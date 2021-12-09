@@ -43,15 +43,15 @@ def make_folder(day_number):
 import sys
 sys.path.insert(0, os.getcwd()) 
 from utils import read_file, get_test_answer
-from aocd.models import Puzzle
+# from aocd.models import Puzzle
 
 puzzle_test = read_file({day_number},test = True)
-puzzle = Puzzle(year=2021, day={day_number}).input_data
+# puzzle = Puzzle(year=2021, day={day_number}).input_data
 
 def solution(puzzle):
     return 
 
 assert solution(puzzle_test) == get_test_answer({day_number})
-puzzle.answer_{step} = solution(puzzle) 
+# puzzle.answer_{step} = solution(puzzle) 
 """
             )

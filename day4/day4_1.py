@@ -2,8 +2,6 @@ file_name = '/Users/ewasu/adventofcode_21/day4/puzzle.txt'
 puzzle = open(file_name,'r') 
 lines = puzzle.readlines() 
 
-#print(lines)
-
 numbers = [int(item.replace('\n','')) for item in lines[0].split(",")]
 
 boards = []

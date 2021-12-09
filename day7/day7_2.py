@@ -14,7 +14,6 @@ puzzle = read_file(7)
 crabs = [int(item) for item in puzzle[0].split(',')]
 
 possible_position = [item for item in range(min(crabs), max(crabs)+1 )]
-
 cheapest_possible = 1000000000 
 
 for position in possible_position:

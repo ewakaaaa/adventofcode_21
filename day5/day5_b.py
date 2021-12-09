@@ -7,6 +7,7 @@ lines = puzzle.readlines()
 x = []
 y = [] 
 
+
 for line in lines:
     start, end = line.split(" -> ")
     x1,y1 = start.split (",")

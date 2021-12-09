@@ -1,6 +1,7 @@
 file_name = '/Users/ewasu/adventofcode_21/day1/puzzle.txt'
 puzzle = open(file_name,'r') 
 
+#part a
 def sum_increased(puzzle):
     item_0 = 0
     counter = 0 
@@ -12,6 +13,7 @@ def sum_increased(puzzle):
 
 print(sum_increased(puzzle))
 
+#part b
 file_name = '/Users/ewasu/adventofcode_21/day1/puzzle.txt'
 puzzle = open(file_name,'r') 
 

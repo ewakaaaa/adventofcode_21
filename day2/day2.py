@@ -1,7 +1,7 @@
 file_name = '/Users/ewasu/adventofcode_21/day2/puzzle.txt'
 puzzle = open(file_name,'r') 
 
-
+#part 1 
 horizontal = 0 
 depth = 0 
 for item in puzzle:
@@ -15,9 +15,9 @@ for item in puzzle:
 
 print(horizontal * depth)
 
+#part 2 
 file_name = '/Users/ewasu/adventofcode_21/day2/puzzle.txt'
 puzzle = open(file_name,'r') 
-
 
 horizontal = 0 
 depth = 0 

@@ -24,10 +24,7 @@ map.append(line_n)
 map = np.array(map)
 map = np.insert(map, 0, np.array(line_0), axis=0)
 
-
-print(map)
 risk = 0 
-
 for row in range(1,map.shape[0]-1):
     for col in range(1,map.shape[1]-1):
         point = map[row][col]

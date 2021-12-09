@@ -11,7 +11,6 @@ for i in range(0,5):
         bit.append(int(item[i]))
     gamma.append(statistics.mode(bit)) 
 
-print(gamma)
 #revert 
 epsilon = [str(int(not bool(item))) for item in gamma]
 
@@ -21,7 +20,4 @@ epsilon = int(''.join(epsilon), 2)
 
 print (epsilon * gamma)
 
-print(gamma)
-print(epsilon)
 
-oxygen_generator_rating = 0 
