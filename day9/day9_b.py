@@ -22,6 +22,7 @@ map.append(nines)
 map = np.array(map)
 map = np.insert(map, 0, np.array(nines), axis=0)
 
+# creating a graph of connections between points
 graph = {}
 for row in range(1,map.shape[0]-1):
     for col in range(1,map.shape[1]-1):
@@ -37,6 +38,7 @@ for row in range(1,map.shape[0]-1):
                 where_can_go.append((row,col-1))
             graph[(row,col)] = where_can_go
 
+# finding the center of the pool
 pools_centrum = [] 
 for row in range(1,map.shape[0]-1):
     for col in range(1,map.shape[1]-1):
@@ -47,6 +49,7 @@ for row in range(1,map.shape[0]-1):
                     if map[row][col-1] > point:
                         pools_centrum.append((row,col))
 
+# walking on a graph to assign points to pools
 pool_sizes = [] 
 for centrum in pools_centrum: 
     pool_size = [centrum] 
@@ -60,6 +63,7 @@ for centrum in pools_centrum:
             pool_size.extend(graph[i])
     pool_sizes.append(len(set(pool_size)))
 
+# final answer
 print(math.prod(sorted(pool_sizes,reverse=True)[:3])) 
                    
 
