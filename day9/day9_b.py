@@ -7,6 +7,7 @@ import math
 
 puzzle_test = read_file(9,test = False)
 
+# loading data as a 2-dimensional array
 map = [] 
 for line in puzzle_test:
     row = [int(item) for item in line.replace('\n','')]
