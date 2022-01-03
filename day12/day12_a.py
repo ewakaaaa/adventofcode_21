@@ -1,13 +1,14 @@
 import os
 import sys
-sys.path.insert(0, os.getcwd()) 
+
+sys.path.insert(0, os.getcwd())
 from utils import read_file
 
-puzzle = read_file(12,test = True)
+puzzle = read_file(12, test=True)
 
 graph = {}
 for line in puzzle:
-    start, end = line.replace("\n",'').split("-")
+    start, end = line.replace("\n", "").split("-")
     if start not in graph.keys():
         graph[start] = [end]
     else:
@@ -16,15 +17,15 @@ for line in puzzle:
         graph[start] = value
     if end not in graph.keys():
         graph[end] = [start]
-    else: 
+    else:
         value = graph[end]
         value.append(start)
         graph[end] = value
 
 
-def solution(graph,point,visited,path:str):
+def solution(graph, point, visited, path: str):
     path += point
-    if point == 'end':
+    if point == "end":
         my_set = set()
         my_set.add(path)
         return my_set
@@ -34,10 +35,8 @@ def solution(graph,point,visited,path:str):
     for i in graph[point]:
         if point.islower():
             visited.append(point)
-        paths.update(solution(graph,i,visited.copy(),path))
+        paths.update(solution(graph, i, visited.copy(), path))
     return paths
 
-print(len(solution(graph,'start',[],'')))
 
-
-
+print(len(solution(graph, "start", [], "")))

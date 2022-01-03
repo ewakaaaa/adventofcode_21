@@ -1,4 +1,4 @@
-def make_costs_table(graph,start):
+def make_costs_table(graph, start):
     inf = float("inf")
     costs = {}
     for node in graph.keys():
@@ -10,7 +10,7 @@ def make_costs_table(graph,start):
     return costs
 
 
-def make_parents_table(graph,start):
+def make_parents_table(graph, start):
     parents = {}
     for node in graph.keys():
         if node != start:
@@ -22,7 +22,7 @@ def make_parents_table(graph,start):
 
 
 def find_the_cheapest_node(costs, processed):
-    min_value = float('inf')
+    min_value = float("inf")
     for k, v in costs.items():
         if k not in processed:
             if costs[k] < min_value:
@@ -31,7 +31,7 @@ def find_the_cheapest_node(costs, processed):
     return cheapest_node, min_value
 
 
-def find_path(parents,start,meta):
+def find_path(parents, start, meta):
     path = [meta]
     key = parents[meta]
     path.append(key)
@@ -43,9 +43,9 @@ def find_path(parents,start,meta):
     return path
 
 
-def dijksta(graph,start,meta):
-    costs = make_costs_table(graph,start)
-    parents = make_parents_table(graph,start)
+def dijksta(graph, start, meta):
+    costs = make_costs_table(graph, start)
+    parents = make_parents_table(graph, start)
     processed = set()
 
     while len(processed) < len(costs.keys()):
@@ -58,4 +58,3 @@ def dijksta(graph,start,meta):
         processed.add(cheapest_node)
         print(len(processed), len(costs.keys()))
     return costs[meta]
-

@@ -1,6 +1,5 @@
 import os
 import sys
-
 sys.path.insert(0, os.getcwd())
 from utils import read_file
 import statistics
@@ -12,13 +11,7 @@ open_to_close = {
     "<": ">",
 }
 
-# TODO dict reverse:
-close_to_open = {
-    ")": "(",
-    "]": "[",
-    "}": "{",
-    ">": "<",
-}
+close_to_open = {v: k for k, v in open_to_close.items()}
 
 score = {
     "(": 1,
@@ -26,7 +19,6 @@ score = {
     "{": 3,
     "<": 4,
 }
-
 
 def find_incomplete(line):
     line_copy = line.copy()

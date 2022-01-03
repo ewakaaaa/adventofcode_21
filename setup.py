@@ -7,4 +7,3 @@ args = parser.parse_args()
 
 make_folder(args.day)
 download_test_puzzle(args.day)
-

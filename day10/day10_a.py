@@ -1,6 +1,5 @@
 import os
 import sys
-
 sys.path.insert(0, os.getcwd())
 from utils import read_file
 
@@ -19,59 +18,6 @@ score = {
     ">": 25137,
 }
 
-
-test_line_1 = [
-    "{",
-    "(",
-    "[",
-    "(",
-    "<",
-    "{",
-    "}",
-    "[",
-    "<",
-    ">",
-    "[",
-    "]",
-    "}",
-    ">",
-    "{",
-    "[",
-    "]",
-    "{",
-    "[",
-    "(",
-    "<",
-    "(",
-    ")",
-    ">",
-]
-test_line_0 = [
-    "{",
-    "(",
-    "[",
-    "{",
-    "{",
-    "}",
-    "}",
-    "[",
-    "<",
-    "[",
-    "[",
-    "[",
-    "<",
-    ">",
-    "{",
-    "}",
-    "]",
-    "]",
-    "]",
-    ">",
-    "[",
-    "]",
-]
-
-
 def find_corrupted(line):
     line_copy = line.copy()
     for i, item_close in enumerate(line):
@@ -89,7 +35,6 @@ def find_corrupted(line):
             else:
                 return item_close
     return "0"
-
 
 wrong_close = []
 for line in read_file(10, test=True):
